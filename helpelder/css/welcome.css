@@ -1,0 +1,51 @@
+body {
+  height: 100%;
+  background: url("https://diariotv.cl/wp-content/uploads/2018/08/PIEL.jpg");
+  background-size:cover;
+}
+
+
+.container .title {
+  margin: 6em 0;
+  color: #fff;
+  text-align-last: center;
+  height: 100px;
+  margin-bottom: 150px;
+}
+.container .title span {
+  max-width: 200px;
+  white-space: pre;
+  background-color: rgba(192,192,192,0.7);
+  font-family: Roboto, sans-serif
+  z-index: 1;
+  font-size:70px;
+  color:purple;
+  font-weight:900;
+
+}
+button {
+  width: 100%;
+  border: 0;
+  background: #81F79F;
+  border: 0;
+  cursor: pointer;
+}
+
+button {
+  border: 3px solid #FFF;
+  border-radius: 20px;
+  width:500px;
+  padding: 0.90em 1.5em;
+  display:block;
+  color: black;
+  font-size: 1.2em;
+  margin: auto;
+  text-transform: uppercase;
+}
+.btn1{
+   margin-bottom: 30px;
+}
+ button:hover {
+  background: "blue";
+  color: #800000;
+}

@@ -1,0 +1,60 @@
+body{
+    padding: 0;
+    margin:0;
+    font-family: Lucida Console, Courier, monospace;
+}
+
+/*css for navbar*/
+/* .navbar {
+	padding: 5px 15px;
+	display: block;
+	margin-bottom: 0px !important;
+	color: #888;
+	font-size: 10pt;
+	letter-spacing: -1px;
+	font-weight: normal;
+} */
+.navbar, .footer{
+    background-color: #dedede !important;
+    background: linear-gradient(to bottom, rgba(206,206,206,1) 0%,rgba(242,242,242,1) 40%,rgba(242,242,242,0.9) 60%,rgba(242,242,242,0.5) 100%);
+}
+a,a:hover{
+    text-decoration: none;
+    color: steelblue;
+}
+.nav-item a{
+    color: gray !important;
+}
+.nav-item a:hover{
+    color: black !important;
+}
+.cardstyle,.serviceCard{
+    margin-top: 110px;
+    margin-bottom: 110px;
+}
+.cardstyle .card,.noborder{
+    border: 0px !important;
+}
+.noborder1{
+    border-left: 0px !important;
+    border-bottom: 0px !important;
+    border-right:1px auto !important;
+}
+.cardstyle img{
+    box-shadow: 10px 10px 5px grey;
+}
+.card.secondcard{
+    margin-left: -20px !important;
+}
+.serviceCard img{
+    height: 250px;
+}
+table tr th, table tr td{
+    border:0px !important;
+}
+
+.form-control:focus,.custom-select:focus{
+    border-color: #cccccc;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
