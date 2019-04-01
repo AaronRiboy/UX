@@ -35,6 +35,9 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="signin.php">Log In</a>
           </li>
+		  <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" data-toggle="modal" href="#login">Sign In</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -174,9 +177,6 @@
       </div>
     </div>
   </section>
-
-
-
   <!--About US-->
   <section class="bg-light" id="team">
     <div class="container">
@@ -334,7 +334,39 @@
       </div>
     </div>
   </footer>
+    <!-- Sign In Modal-->
+	<div id="login" class="modal fade">
+	  <div class="modal-dialog  modal-dialog-centered">
+		
+		<div class="modal-content">
+		  <div class="modal-header" style="margin: auto;">
+			 <img src="img/loginSC.png" style="height: 413px; width: 424px;">
+		  </div>
+		  
+		  <div class="modal-body" style="background-color : white;  padding: 26px 100px 13px 100px;">
+				<form action="<?php $_SERVER['PHP_SELF']; ?>" method="get">
+					<div class="form-group">
+						<input class="form-control" type="text" class="form-control" placeholder="Username" name="username" <?php echo 'required'?>>
+					</div>
+						
+					<div class="form-group">
+						<input class="form-control" type="password" placeholder="Password" name="password" required>
+					</div>
+					
+					<div class="form-group">
+						<input class="form-control" type="submit" value="Log In"style="background-color:lightblue">
+					</div>
 
+				</form>
+		  </div>
+		  
+		  <div class="modal-footer" style="margin : auto;">
+			<a href="">Forgotten account?</a> · <a href="">Sign up for SeniorCare</a>
+		  </div>
+		</div>
+
+	  </div>
+	</div>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
