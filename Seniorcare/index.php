@@ -361,7 +361,11 @@
 		echo 'alert("'.$error.'");';
 		echo '$("#login").modal();';
 	}?>
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> parent of 408905d... Finished index page
     (function ($) {
       "use strict"; // Start of use strict
 
