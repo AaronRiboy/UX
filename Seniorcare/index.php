@@ -89,9 +89,7 @@
       <div class="row">
 
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" >
             <img class="img-fluid" src="img\geriatric-medical-care.jpg" alt="" >
-          </a>
           <div class="portfolio-caption">
             <h4>Medical Care</h4>
             <p class="text-muted">Call us for more details</p>
@@ -99,9 +97,7 @@
         </div>
 
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
             <img class="img-fluid" src="img\services3.jpg" alt="">
-          </a>
           <div class="portfolio-caption">
             <h4>Companionship</h4>
             <p class="text-muted"> We will provide various activities to keep you occupied. You can also bond with the
@@ -110,10 +106,7 @@
         </div>
 
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-
             <img class="img-fluid" src="img\Nurse-older-medication.jpg" alt="">
-          </a>
           <div class="portfolio-caption">
             <h4>Assisted Living</h4>
             <p class="text-muted">We are able to care for the able-bodied & semi able-bodied patients.</p>
@@ -121,10 +114,7 @@
         </div>
 
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-
             <img class="img-fluid" src="img\helping-senior-citizen-grocery-shop-750.jpg" alt="">
-          </a>
           <div class="portfolio-caption">
             <h4>Shopping</h4>
             <p class="text-muted">Will Accompany them </p>
@@ -132,10 +122,7 @@
         </div>
 
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-
             <img class="img-fluid" src="img\Our_Services-Cleaning_for_Seniors-400x267.jpg" alt="">
-          </a>
           <div class="portfolio-caption">
             <h4>Housekeeping</h4>
             <p class="text-muted">Our Caregiver will carry out round the clock housekeeping and perform chores such as
@@ -145,10 +132,7 @@
 
 
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-
             <img class="img-fluid" src="img\Fotolia_49135035_M.jpg" alt="">
-          </a>
           <div class="portfolio-caption">
             <h4>Activities</h4>
             <p class="text-muted">We will arrange for a variety of activities to keep your mind sharp and your body
