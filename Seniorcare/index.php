@@ -134,17 +134,15 @@
             <img class="img-fluid" src="img\helping-senior-citizen-grocery-shop-750.jpg" alt="">
           </a>
           <div class="portfolio-caption">
-            <h4>Buying Grocery</h4>
-            <p class="text-muted">Will Accompany them</p>
+            <h4>Shopping</h4>
+            <p class="text-muted">Will Accompany them </p>
           </div>
         </div>
 
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
             <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
+
             </div>
             <img class="img-fluid" src="img\Our_Services-Cleaning_for_Seniors-400x267.jpg" alt="">
           </a>
@@ -159,9 +157,7 @@
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
             <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
+
             </div>
             <img class="img-fluid" src="img\Fotolia_49135035_M.jpg" alt="">
           </a>
