@@ -338,7 +338,7 @@
 						<input class="form-control" type="submit" value="Log In"style="background-color:lightblue">
 					</div>
 					<div style="font-size : 9pt;" class="text-center">
-						<a href="">Forgotten account?</a> &middot <a href="">Sign up for SeniorCare</a>
+						<a href="#contact" onclick="forgotAcc();">Forgotten account?</a> &middot <a href="">Sign up for SeniorCare</a>
 					</div>
 
 				</form>
@@ -361,11 +361,9 @@
 		echo 'alert("'.$error.'");';
 		echo '$("#login").modal();';
 	}?>
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> parent of 408905d... Finished index page
+	function forgotAcc(){
+		$("#login").modal('hide');
+	}
     (function ($) {
       "use strict"; // Start of use strict
 
