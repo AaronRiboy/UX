@@ -211,6 +211,21 @@ figure {
   height: 500px;
 }
 
+@media screen and (min-width: 480px) {
+  .home-banner{
+    background-position: center;
+    background-size: cover;
+
+  }
+}
+@media screen and (min-width: 320px) {
+  .home-banner{
+    background-position: center;
+    background-size: cover;
+
+  }
+}
+
 .service-text{
   color: white;
 }
@@ -457,7 +472,7 @@ section#contact :-ms-input-placeholder {
 footer {
   padding: 25px 0;
   text-align: center;
-  
+
 }
 
 footer span.copyright {
