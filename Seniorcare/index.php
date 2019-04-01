@@ -32,9 +32,6 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="signin.php">Log In</a>
-          </li>
 		  <li class="nav-item">
             <a class="nav-link js-scroll-trigger" data-toggle="modal" href="#login">Sign In</a>
           </li>
@@ -353,7 +350,7 @@
 						<input class="form-control" type="submit" value="Log In"style="background-color:lightblue">
 					</div>
 					<div style="font-size : 9pt;" class="text-center">
-						<a href="">Forgotten account?</a> &middot <a href="">Sign up for SeniorCare</a>
+						<a href="#contact" onclick="forgotAcc();">Forgotten account?</a> &middot <a href="signup.php">Sign up for SeniorCare</a>
 					</div>
 
 				</form>
@@ -376,6 +373,9 @@
 		echo 'alert("'.$error.'");';
 		echo '$("#login").modal();';
 	}?>
+	function forgotAcc(){
+		$("#login").modal('hide');
+	}
 	
     (function ($) {
       "use strict"; // Start of use strict
