@@ -210,8 +210,8 @@
         </div>
         <div class="col-sm-6">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img\pura.jpg" alt="">
-            <h4>Puraveen Kumar</h4>
+            <img class="mx-auto rounded-circle" src="img\khubs.jpg" alt="">
+            <h4>Khuberan Raj</h4>
             <p class="text-muted">Lead Marketer</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
