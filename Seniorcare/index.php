@@ -89,10 +89,8 @@
       <div class="row">
 
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#">
-            <div class="portfolio-hover">
-            </div>
-            <img class="img-fluid" src="img\geriatric-medical-care.jpg" alt="" href="#">
+          <a class="portfolio-link" data-toggle="modal" >
+            <img class="img-fluid" src="img\geriatric-medical-care.jpg" alt="" >
           </a>
           <div class="portfolio-caption">
             <h4>Medical Care</h4>
@@ -102,8 +100,6 @@
 
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-            <div class="portfolio-hover">
-            </div>
             <img class="img-fluid" src="img\services3.jpg" alt="">
           </a>
           <div class="portfolio-caption">
@@ -115,11 +111,7 @@
 
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
 
-              </div>
-            </div>
             <img class="img-fluid" src="img\Nurse-older-medication.jpg" alt="">
           </a>
           <div class="portfolio-caption">
@@ -130,10 +122,7 @@
 
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-              </div>
-            </div>
+
             <img class="img-fluid" src="img\helping-senior-citizen-grocery-shop-750.jpg" alt="">
           </a>
           <div class="portfolio-caption">
@@ -144,9 +133,7 @@
 
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-            <div class="portfolio-hover">
 
-            </div>
             <img class="img-fluid" src="img\Our_Services-Cleaning_for_Seniors-400x267.jpg" alt="">
           </a>
           <div class="portfolio-caption">
@@ -159,9 +146,7 @@
 
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-            <div class="portfolio-hover">
 
-            </div>
             <img class="img-fluid" src="img\Fotolia_49135035_M.jpg" alt="">
           </a>
           <div class="portfolio-caption">
@@ -333,22 +318,22 @@
     <!-- Sign In Modal-->
 	<div id="login" class="modal fade">
 	  <div class="modal-dialog  modal-dialog-centered">
-		
+
 		<div class="modal-content">
 		  <div class="modal-header" style="margin: auto;">
 			 <img src="img/loginSC.png" style="height: 413px; width: 424px;">
 		  </div>
-		  
+
 		  <div class="modal-body" style="background-color : white;  padding: 26px 100px 13px 100px;">
 				<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
 					<div class="form-group">
 						<input class="form-control" type="text" class="form-control" placeholder="Username" name="username" <?php if(isset($_POST['username'])){echo 'value="'.$_POST['username'].'"';}?> required>
 					</div>
-						
+
 					<div class="form-group">
 						<input class="form-control" type="password" placeholder="Password" name="password" required>
 					</div>
-					
+
 					<div class="form-group">
 						<input class="form-control" type="submit" value="Log In"style="background-color:lightblue">
 					</div>
@@ -362,7 +347,7 @@
 
 	  </div>
 	</div>
-	
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -376,7 +361,7 @@
 		echo 'alert("'.$error.'");';
 		echo '$("#login").modal();';
 	}?>
-	
+
     (function ($) {
       "use strict"; // Start of use strict
 
