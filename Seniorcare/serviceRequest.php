@@ -79,7 +79,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12">
+                  <div class="col-md-6">
                     <div class="form-group">
                       <span class="form-label">Type Of Services</span>
                       <select class="form-control" id="serviceName" name="serviceName" required >
@@ -95,29 +95,34 @@
                       <span class="select-arrow"></span>
                     </div>
                   </div>
-                </div>
-                <div class="row">
                   <div class="col-md-6" >
                     <div class="form-group" >
                       <span class="form-label">Booking Date</span>
                       <input class="form-control" type="date" name="bookingDate" required>
                     </div>
                   </div>
+                </div>
+                <div class="row">
                   <div class="col-md-6">
                     <div class="form-group" >
                       <span class="form-label">Booking time</span>
                       <input class="form-control" type="time" name="bookingTime" required>
                     </div>
                   </div>
-                </div>
-                <div class="row">
+                  
                   <div class="col-md-6">
                     <div class="form-group" >
                       <span class="form-label">Notes</span>
                       <input class="form-control" type="text" placeholder="Optional" name="notes" >
                     </div>
+                </div>
+                <div class="row justify-content-center">
+
                   </div>
-                  <div class="col-md-3 ">
+                </div>
+
+                <div class="row justify-content-center">
+                  <div class="col-md-3 center ">
                     <div class="form-btn">
                       <button class="submit-btn" name"submit">Confirm Booking</button>
                     </div>
@@ -131,6 +136,7 @@
     </div>
   </section>
 
+<br>
 
 
 

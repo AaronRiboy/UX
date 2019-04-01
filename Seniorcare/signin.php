@@ -22,7 +22,7 @@
 
         }
 
-        
+
 
         .card-container.card {
             max-width: 700px;
@@ -162,6 +162,7 @@
                     <br>
                     <button type="submit" name="submit" class="signinbtn btn btn-xs btn-primary btn-block" style="color: black">Sign
                         In</button>
+                        <br>
                     <a href="index.php"><button type="button" class="cancelbtn btn btn-xs btn-danger btn-block" style="color: black;">Cancel</button></a><br>
                     <span class="signup">Haven't registered? <a href="signup.php" style="color: #00b3b3 ; font-weight: bold">Sign
                             Up</a></span>
