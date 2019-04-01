@@ -1,5 +1,5 @@
 <html lang="en" dir="ltr">
-
+<?php include "includes/signin.php"; ?>
 <head>
   <meta charset="utf-8">
   <title>SeniorCare</title>
@@ -340,9 +340,9 @@
 		  </div>
 		  
 		  <div class="modal-body" style="background-color : white;  padding: 26px 100px 13px 100px;">
-				<form action="<?php $_SERVER['PHP_SELF']; ?>" method="get">
+				<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
 					<div class="form-group">
-						<input class="form-control" type="text" class="form-control" placeholder="Username" name="username" <?php echo 'required'?>>
+						<input class="form-control" type="text" class="form-control" placeholder="Username" name="username" <?php if(isset($_POST['username'])){echo 'value="'.$_POST['username'].'"';}?> required>
 					</div>
 						
 					<div class="form-group">
@@ -352,17 +352,17 @@
 					<div class="form-group">
 						<input class="form-control" type="submit" value="Log In"style="background-color:lightblue">
 					</div>
+					<div style="font-size : 9pt;" class="text-center">
+						<a href="">Forgotten account?</a> &middot <a href="">Sign up for SeniorCare</a>
+					</div>
 
 				</form>
-		  </div>
-		  
-		  <div class="modal-footer" style="margin : auto;">
-			<a href="">Forgotten account?</a> · <a href="">Sign up for SeniorCare</a>
 		  </div>
 		</div>
 
 	  </div>
 	</div>
+	
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -372,6 +372,11 @@
     crossorigin="anonymous"></script>
 
   <script type="text/javascript" class="navbar-script">
+  <?php if($error!=""){
+		echo 'alert("'.$error.'");';
+		echo '$("#login").modal();';
+	}?>
+	
     (function ($) {
       "use strict"; // Start of use strict
 
