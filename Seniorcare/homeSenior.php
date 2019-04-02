@@ -54,7 +54,7 @@
             <br><br><br><br><br>
             <div class="wow-outer">
               <h3 style="color:#00b3b3; padding-left:220px; padding-top: 200px">Welcome,</h3>
-              <h1 class="font-weight-bold" style="color:#00b3b3; padding-left: 250px">Senior Citizen</h1>
+              <h1 class="font-weight-bold" style="color:#00b3b3; padding-left: 250px"><?php echo $_SESSION['fullname']; ?></h1>
             </div>
           </div>
         </div>

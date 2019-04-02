@@ -33,9 +33,6 @@ include "includes/dbconnection.php";
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="manageRequestProvider.php">Manage Request</a>
           </li>
-		  <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="">Update Services</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="includes/logout.php">Log Out</a>
           </li>
