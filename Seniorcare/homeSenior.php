@@ -48,13 +48,13 @@
   <!--Banner-->
   <section class="section section-xl bg-gray-700" >
     <div class="container">
-      <div class="row justify-content-sm-end service-text">
+      <div class="row service-text">
         <div class="col-sm-9 col-md-7 col-lg-6">
           <div class="box-2">
-            <br><br><br><br><br>
-            <div class="wow-outer">
-              <h3 style="color:#00b3b3; padding-left:220px; padding-top: 200px">Welcome,</h3>
-              <h1 class="font-weight-bold" style="color:#00b3b3; padding-left: 250px"><?php echo $_SESSION['fullname']; ?></h1>
+            <br><br><br>
+            <div class="wow-outer" style="color:#00b3b3; padding-left:10%; padding-top: 15%">
+              <h3>Welcome,</h3>
+              <h1 class="font-weight-bold" style="padding-left: 20%"><?php echo $_SESSION['fullname']; ?></h1>
             </div>
           </div>
         </div>

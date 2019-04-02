@@ -48,9 +48,9 @@ include "includes/dbconnection.php";
         <div class="col-sm-9 col-md-7 col-lg-6">
           <div class="box-2">
             <br><br><br><br><br>
-            <div class="wow-outer">
-              <h3 style="color:#b30059; padding-left:5%">Welcome,</h3>
-              <h1 class="font-weight-bold" style="color:#b30059; padding-left:8%"><?php echo $_SESSION['fullname']; ?></h1>
+            <div class="wow-outer" style="color:#660033;">
+              <h3 style="padding-left:5%">Welcome,</h3>
+              <h1 class="font-weight-bold" style="padding-left:8%"><?php echo $_SESSION['fullname']; ?></h1>
             </div>
           </div>
         </div>
