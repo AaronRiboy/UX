@@ -1,3 +1,19 @@
+<?php include("includes/dbconnection.php"); 
+if(isset($_POST['serviceCode'])){
+	$time = $_POST['bookingDate']." ".str_replace("%3A",":",$_POST['bookingTime']);
+	$sql = "INSERT INTO Request (demander,service,acquiredDate) VALUES
+			('".$_SESSION['username']."','".$_POST['serviceCode']."','".$time."');";
+	if (mysqli_query($dbCon, $sql)){
+		echo '<script language="javascript">';
+		echo 'alert("Service Requested!")';
+		echo '</script>';
+		echo  "<script> window.location.assign('homeSenior.php'); </script>";
+	} else {
+		echo "Error Encountered!";
+	}
+}
+
+?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -44,22 +60,21 @@
 						<br><br><br><br><br>
 							<div class="row ">
 								<div class="booking-form col-md-12 col-sm-12">
-									<form name="myForm" id="myForm" action="booking.php" onsubmit="return validateForm()" method="POST">
+									<form name="myForm" id="myForm" action="<?php $_SERVER['PHP_SELF']; ?>" onsubmit="return validateForm()" method="POST">
 										<div class="text-center welcome">
 											<h1>Service Request</h1>
 										</div>
 										<div class="row">
 											<div class="form-group col-md-6">
 												<span class="form-label">Type Of Services</span>
-												<select class="form-control" name="serviceName" required >
+												<select class="form-control" name="serviceCode" required >
 												<option value="">Select Here</option>
-												<option value="medicalCare">Medical Care</option>
-												<option value="companionship">Companionship</option>
-												<option value="assistedLiving">Assisted Living</option>
-												<option value="buyingGrocery">Buying Grocery</option>
-												<option value="housekeeping">Housekeeping</option>
-												<option value="activities">Activities</option>
-												<option value="others">Others</option>
+												<option value="SV001">Medical Care</option>
+												<option value="SV002">Companionship</option>
+												<option value="SV003">Assisted Living</option>
+												<option value="SV004">Buying Grocery</option>
+												<option value="SV005">Housekeeping</option>
+												<option value="SV006">Activities</option>
 												</select>
 												<span class="select-arrow"></span>
 											</div>
@@ -165,9 +180,7 @@
       if (x == "") {
           alert("Please select the number of services");
           return false;
-      }
-
-
+      } 
     }
 
 

@@ -87,7 +87,7 @@ width: 100%;">
 					<?php echo $row["notes"]?>
 				</td>
 				<td>
-					<a href="action.php?id=<?php echo $row['ID']?>&action=2">Accept</a>
+					<a href="action.php?id=<?php echo $row['ID']?>&action=1">Accept</a>
 				</td>
               </tr>
 			<?php }} else {
