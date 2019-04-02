@@ -66,7 +66,7 @@ width: 100%;">
 					R.status
 					FROM request AS R 
 					INNER JOIN services AS S ON S.serviceCode = R.service
-					WHERE R.supplier LIKE '".$_SESSION['username']."';";
+					WHERE R.demander LIKE '".$_SESSION['username']."';";
           $result = mysqli_query($dbCon,$sql);
 
           if ($result-> num_rows > 0 ){
