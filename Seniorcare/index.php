@@ -371,13 +371,12 @@
     <!-- Sign In Modal-->
 	<div id="login" class="modal fade">
 	  <div class="modal-dialog  modal-dialog-centered">
-
-		<div class="modal-content">
+		<div class="modal-content" style="width: auto;">
 		  <div class="modal-header" style="margin: auto;">
-			 <img src="img/loginSC.png" style="height: 413px; width: 424px;">
+			 <img src="img/loginSC.png" style="height: 308px; width: 314px;">
 		  </div>
 
-		  <div class="modal-body" style="background-color : white;  padding: 26px 100px 13px 100px;">
+		  <div class="modal-body" style="padding: 26px 80px 13px 80px;">
 				<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
 					<div class="form-group">
 						<input class="form-control" type="text" class="form-control" placeholder="Username" name="username" <?php if(isset($_POST['username'])){echo 'value="'.$_POST['username'].'"';}?> required>
@@ -387,7 +386,7 @@
 						<input class="form-control" type="password" placeholder="Password" name="password" required>
 					</div>
 
-					<div class="form-group" style="padding : 0px 50px 0px 50px;">
+					<div class="form-group">
 						<input class="form-control" type="submit" value="Log In"style="background-color:lightblue">
 					</div>
 					<div style="font-size : 9pt;" class="text-center">
