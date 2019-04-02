@@ -1,8 +1,8 @@
 <?php include("includes/dbconnection.php"); 
 if(isset($_POST['serviceCode'])){
 	$time = $_POST['bookingDate']." ".str_replace("%3A",":",$_POST['bookingTime']);
-	$sql = "INSERT INTO Request (demander,service,acquiredDate) VALUES
-			('".$_SESSION['username']."','".$_POST['serviceCode']."','".$time."');";
+	$sql = "INSERT INTO Request (demander,service,acquiredDate,notes) VALUES
+			('".$_SESSION['username']."','".$_POST['serviceCode']."','".$time."','".$_POST['notes']."');";
 	if (mysqli_query($dbCon, $sql)){
 		echo '<script language="javascript">';
 		echo 'alert("Service Requested!")';
@@ -53,7 +53,7 @@ if(isset($_POST['serviceCode'])){
 
 
     <!--Booking-->
-		<section>
+		<section style="height:100%; padding-top:5%">
 			<div id="booking" class="section-1">
 				<div class="section-center">
 					<div class="container ">
@@ -111,7 +111,6 @@ if(isset($_POST['serviceCode'])){
 				</div>
 			</div>
 		</section>
-<br><br><br><br>
   <?php include "footer.php" ?>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -1,5 +1,5 @@
 <!-- Footer -->
-  <footer style="background-color: white;bottom: 0px;position: fixed;width : 100%;">
+  <footer style="background-color: white;bottom: 0px;width : 100%;">
     <div class="container" >
       <div class="row">
         <div class="col-md-4">

@@ -15,6 +15,7 @@
             crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
+	
 	<body style="background-color:#1F2739;">
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
@@ -35,7 +36,7 @@
 
     <br><br><br> <br> <br><br>
 
-<div style="padding : 50px 0px 0px 0px">
+<div style="padding : 50px 0px 0px 0px; height:69%;" >
     <h1 style = "font-size:3em;
 				font-weight: 300;
 				line-height:1em;

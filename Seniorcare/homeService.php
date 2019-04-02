@@ -42,7 +42,7 @@ include "includes/dbconnection.php";
   </nav>
 
   <!--Banner-->
-  <section >
+  <section style="height:85%;" >
     <div class="container">
       <div class="row service-text">
         <div class="col-sm-9 col-md-7 col-lg-6">

@@ -39,7 +39,7 @@
 
     <br><br><br> <br> <br><br>
 
-<div style="padding : 50px 0px 0px 0px">
+<div style="padding : 50px 0px 0px 0px; height:69%;">
     <h1 style = "font-size:3em;
   font-weight: 300;
   line-height:1em;
