@@ -1,25 +1,12 @@
 <?php
 include "includes/dbconnection.php";
-
-$sql_user = "SELECT * FROM signup WHERE user_id='".$_SESSION['user_id']."'";
-
-
-//var_dump($_SESSION);
-$query_user = mysqli_query($dbCon,$sql_user);
-echo mysqli_error($dbCon);
-$user = mysqli_fetch_array($query_user);
-
-
-
-
 ?>
-
 
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <title>SeniorCare</title>
+  <title>SeniorCare - Service Provider</title>
   <link href="style.css" rel="stylesheet">
   <link href="portfolioStyle.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
@@ -29,7 +16,7 @@ $user = mysqli_fetch_array($query_user);
     crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-image: url('img/homeSP.jpg');background-size: cover;">
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
@@ -46,6 +33,9 @@ $user = mysqli_fetch_array($query_user);
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="manageRequestProvider.php">Manage Request</a>
           </li>
+		  <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="updateServices.php">Update Services</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="includes/logout.php">Log Out</a>
           </li>
@@ -54,19 +44,16 @@ $user = mysqli_fetch_array($query_user);
     </div>
   </nav>
 
-
-
-
   <!--Banner-->
-  <section class="section section-xl bg-gray-700" style="background-image: url('img/homeSP.jpg');height: 500px;background-size: cover; opacity:0.9">
+  <section >
     <div class="container">
-      <div class="row justify-content-sm-end service-text">
+      <div class="row service-text">
         <div class="col-sm-9 col-md-7 col-lg-6">
           <div class="box-2">
             <br><br><br><br><br>
             <div class="wow-outer">
-              <h3 style="color:#b30059; padding-left:450px">Welcome,</h3>
-              <h1 class="font-weight-bold" style="color:#b30059; padding-left:200px">Service Provider</h1>
+              <h3 style="color:#b30059; padding-left:5%">Welcome,</h3>
+              <h1 class="font-weight-bold" style="color:#b30059; padding-left:8%"><?php echo $_SESSION['fullname']; ?></h1>
             </div>
           </div>
         </div>
@@ -74,45 +61,7 @@ $user = mysqli_fetch_array($query_user);
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <span class="copyright">Copyright &copy; SeniorCare 2018</span>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fa fa-phone"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline quicklinks">
-            <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <?php include "footer.php" ?>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

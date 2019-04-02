@@ -1,20 +1,4 @@
-<?php
-include "includes/signin.php";
-
-$sql_user = "SELECT * FROM signup WHERE user_id='".$_SESSION['user_id']."'";
-
-
-//var_dump($_SESSION);
-$query_user = mysqli_query($dbCon,$sql_user);
-echo mysqli_error($dbCon);
-$user = mysqli_fetch_array($query_user);
-
-
-
-
-?>
-
-
+<?php include "includes/dbconnection.php"?>
 <html lang="en" dir="ltr">
 
 <head>
@@ -29,7 +13,7 @@ $user = mysqli_fetch_array($query_user);
     crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-image: url('img/homeSe.jpg');background-size: cover;">
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
@@ -42,7 +26,7 @@ $user = mysqli_fetch_array($query_user);
         <ul class="navbar-nav text-uppercase ml-auto">
 
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="serviceRequest.php">Submit Request</a>
+            <a class="nav-link js-scroll-trigger" href="serviceRequest.php">Make Request</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="manageRequestUser.php">Manage Request</a>
@@ -62,7 +46,7 @@ $user = mysqli_fetch_array($query_user);
 
 
   <!--Banner-->
-  <section class="section section-xl bg-gray-700" style="background-image: url('img/homeSe.jpg');height: 500px;background-size: cover;">
+  <section class="section section-xl bg-gray-700" >
     <div class="container">
       <div class="row justify-content-sm-end service-text">
         <div class="col-sm-9 col-md-7 col-lg-6">
@@ -78,50 +62,7 @@ $user = mysqli_fetch_array($query_user);
     </div>
   </section>
 
-
-
-
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <span class="copyright">Copyright &copy; SeniorCare 2018</span>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fa fa-phone"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline quicklinks">
-            <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+<?php include "footer.php" ?>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>

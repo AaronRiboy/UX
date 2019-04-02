@@ -1,5 +1,3 @@
-<body>
-  <!DOCTYPE html>
   <html lang="en" dir="ltr">
 
   <head>
@@ -15,8 +13,9 @@
     <!--===============================================================================================-->
 
     <link rel="stylesheet" type="text/css" href="style_mr.css">
+	</head>
 
-
+<body>
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
@@ -30,9 +29,6 @@
 
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#">Accept Request</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="manageRequestUser.php">Manage Request</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="includes/logout.php">Log Out</a>
@@ -59,39 +55,66 @@
           <th>Status</th>
           <th>Action</th>
         </tr>
-
         <?php
-      $servername = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname = "seniorcare";
-      $con = new mysqli($servername, $username, $password, $dbname);
+		include "includes/dbconnection.php";
 
-          $sql = "SELECT serviceID, serviceName,bookingDate,bookingTime,notes,numOfServices,status from booking";
-          $result = $con -> query($sql);
+          $sql = "SELECT 
+					R.ID AS serviceID,
+					S.title AS serviceName,
+					R.acquiredDate AS bookingDate,
+					NULL AS bookingTime,
+					R.notes,
+					NULL AS numOfServices,
+					R.status
+					FROM request AS R 
+					INNER JOIN services AS S ON S.serviceCode = R.service
+					WHERE R.supplier LIKE '".$_SESSION['username']."';";
+          $result = mysqli_query($dbCon,$sql);
 
           if ($result-> num_rows > 0 ){
-            while($row = $result -> fetch_assoc()){
-              echo "<tr> <td>".$row["serviceID"]."</td> <td>".$row["serviceName"]."</td><td>".$row["bookingDate"]."</td><td>"
-              .$row["bookingTime"]."</td><td>".$row["notes"]."</td><td>".$row["numOfServices"]."</td><td>".$row["status"]."</td>
-              <td><a href='acceptAction.php?id=".$row['serviceID']."'>Accept</a></td>
-              </tr>"
-              ;
-
-            }
-            echo "</table>";
-          }
-          else {
+            while($row = $result -> fetch_assoc()){?>
+              <tr> 
+				<td>
+					<?php echo $row["serviceID"];?>
+				</td>
+				<td>
+					<?php echo $row["serviceName"];?>
+				</td>
+				<td>
+					<?php echo $row["bookingDate"];?>
+				</td>
+				<td>
+					<?php echo $row["bookingTime"];?>
+				</td>
+				<td>
+					<?php echo $row["notes"]?>
+				</td>
+				<td>
+					<?php echo $row["numOfServices"]?>
+				</td>
+				<td>
+					<?php echo $row["status"]?>
+				</td>
+				<td>
+					<?php if($row["status"]=="accepted"){
+						echo '<a href="action.php?id='.$row['serviceID'].'&action=2">Completed</a>';
+					}elseif($row["status"]=="completed"){
+						echo '<a href="rate.php?id='.$row['serviceID'].'">Rate</a>';
+					} ?>
+					
+				</td>
+              </tr>
+            </table>
+			<?php }} else {
             echo "0 result";
           }
-          $con ->close();
-
            ?>
       </table>
 
 
     </div>
 
+  <?php include "footer.php" ?>
 </body>
 
 </html>
