@@ -26,4 +26,4 @@ switch ($_GET['action']){
 		update("completed");
 		break;
 }
-?>
+?> 
