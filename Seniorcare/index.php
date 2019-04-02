@@ -163,7 +163,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.facebook.com/aaron.riboyii">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
@@ -187,7 +187,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.facebook.com/khubs.raj">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
@@ -203,7 +203,7 @@
           <div class="team-member">
             <img class="mx-auto rounded-circle" src="img\dam.jpg" alt="">
             <h4>Dam Chong</h4>
-            <p class="text-muted">Developer</p>
+            <p class="text-muted">Software Developer</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -211,7 +211,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.facebook.com/damchong95">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
@@ -227,7 +227,7 @@
           <div class="team-member">
             <img class="mx-auto rounded-circle" src="img\yimin.jpg" alt="">
             <h4>Yi Min</h4>
-            <p class="text-muted">Quality Assurance Manager </p>
+            <p class="text-muted">Quality Assurance Manager</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -235,7 +235,31 @@
                 </a>
               </li>
               <li class="list-inline-item">
+                <a href="https://www.facebook.com/yimin22">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
                 <a href="#">
+                  <i class="fa fa-phone"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+		<div class="col-sm-6">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img\gau.jpg" alt="">
+            <h4>Gauthaman</h4>
+            <p class="text-muted">Public Relation Manager</p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/GauthamGau98">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
@@ -363,7 +387,7 @@
 						<input class="form-control" type="password" placeholder="Password" name="password" required>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group" style="padding : 0px 50px 0px 50px;">
 						<input class="form-control" type="submit" value="Log In"style="background-color:lightblue">
 					</div>
 					<div style="font-size : 9pt;" class="text-center">

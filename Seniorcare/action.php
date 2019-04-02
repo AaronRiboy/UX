@@ -14,6 +14,10 @@ function update($status) {
 	}
 }
 
+function cancel(){
+	
+}
+
 switch ($_GET['action']){
     case 1 : 
 		update("accepted");
