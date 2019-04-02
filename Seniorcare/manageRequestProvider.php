@@ -47,9 +47,28 @@
   color: yellow;padding : 0px 0px 25px 0px;">Manage Request</h1>
     <br>
     <div class="container">
-      <table style="border-collapse: collapse;
-width: 100%;">
-        <tr style="color:lightgray;">
+	<style>
+	table {border-collapse: collapse;
+	width: 100%;}
+	#list td, #list th {
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+#list tr:nth-child(even){background-color: gray;}
+
+#list tr:nth-child(odd){background-color: black;}
+
+#list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #00b3b3;
+  color: lightgray;
+}
+	</style>
+      <table id="list">
+        <tr>
           <th>Service Name</th>
           <th>Booking Datetime</th>
           <th>Notes</th>

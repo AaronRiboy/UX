@@ -369,9 +369,9 @@
     </div>
   </footer>
     <!-- Sign In Modal-->
-	<div id="login" class="modal fade">
+	<div id="login" class="modal fade" style="padding : 0px;">
 	  <div class="modal-dialog  modal-dialog-centered">
-		<div class="modal-content" style="width: auto;">
+		<div class="modal-content" style="width: auto;margin: auto;">
 		  <div class="modal-header" style="margin: auto;">
 			 <img src="img/loginSC.png" style="height: 308px; width: 314px;">
 		  </div>
