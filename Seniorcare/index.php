@@ -139,7 +139,7 @@
       </div>
     </div>
   </section>
-  
+
   <!--About US-->
   <section class="bg-light" id="team">
     <div class="container">
@@ -151,7 +151,7 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
           <div class="team-member">
             <img class="mx-auto rounded-circle" src="img\aaron.jpg" alt="">
             <h4>Aaron Kajenderan</h4>
