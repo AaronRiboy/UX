@@ -12,14 +12,13 @@
       crossorigin="anonymous">
     <!--===============================================================================================-->
 
-    <link rel="stylesheet" type="text/css" href="style_mr.css">
 	</head>
 
-<body>
+<body style="background-color:#1F2739;">
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img\LogoS.png" class="logo"></a>
+        <a class="navbar-brand js-scroll-trigger" href="homeService.php"><img src="img\LogoS.png" class="logo"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
           aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
@@ -28,7 +27,7 @@
           <ul class="navbar-nav text-uppercase ml-auto">
 
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#">Accept Request</a>
+              <a class="nav-link js-scroll-trigger" href="accept.php">Accept Request</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="includes/logout.php">Log Out</a>
@@ -40,18 +39,21 @@
 
     <br><br><br> <br> <br><br>
 
-
-    <h1 class="yellow">Manage Request</h1>
+<div style="padding : 100px 0px 0px 0px">
+    <h1 style = "font-size:3em;
+  font-weight: 300;
+  line-height:1em;
+  text-align: center;
+  color: yellow;padding : 0px 0px 25px 0px;">Manage Request</h1>
     <br>
     <div class="container">
-      <table>
-        <tr>
+      <table style="border-collapse: collapse;
+width: 100%;">
+        <tr style="color:lightgray;">
           <th>Service ID</th>
           <th>Service Name</th>
-          <th>Booking Date</th>
-          <th>Booking Time</th>
+          <th>Booking Datetime</th>
           <th>Notes</th>
-          <th>Number of Services</th>
           <th>Status</th>
           <th>Action</th>
         </tr>
@@ -73,7 +75,7 @@
 
           if ($result-> num_rows > 0 ){
             while($row = $result -> fetch_assoc()){?>
-              <tr> 
+              <tr style="color:white;"> 
 				<td>
 					<?php echo $row["serviceID"];?>
 				</td>
@@ -84,13 +86,7 @@
 					<?php echo $row["bookingDate"];?>
 				</td>
 				<td>
-					<?php echo $row["bookingTime"];?>
-				</td>
-				<td>
 					<?php echo $row["notes"]?>
-				</td>
-				<td>
-					<?php echo $row["numOfServices"]?>
 				</td>
 				<td>
 					<?php echo $row["status"]?>
@@ -99,19 +95,19 @@
 					<?php if($row["status"]=="accepted"){
 						echo '<a href="action.php?id='.$row['serviceID'].'&action=2">Completed</a>';
 					}elseif($row["status"]=="completed"){
-						echo '<a href="rate.php?id='.$row['serviceID'].'">Rate</a>';
+						//echo '<a href="rate.php?id='.$row['serviceID'].'">Rate</a>';
+						echo '<a href="">Rate</a>';
 					} ?>
 					
 				</td>
               </tr>
-            </table>
 			<?php }} else {
             echo "0 result";
           }
            ?>
       </table>
 
-
+</div>
     </div>
 
   <?php include "footer.php" ?>

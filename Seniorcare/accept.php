@@ -1,5 +1,3 @@
-<body>
-  <!DOCTYPE html>
   <html lang="en" dir="ltr">
 
   <head>
@@ -13,11 +11,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous">
     <!--===============================================================================================-->
-
-    <link rel="stylesheet" type="text/css" href="style_mr.css">
-
+</head>
 
 
+<body style="background-color:#1F2739;">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="homeService.php"><img src="img\LogoS.png" class="logo"></a>
@@ -30,7 +27,7 @@
 
 
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="manageRequestService.php">Manage Request</a>
+              <a class="nav-link js-scroll-trigger" href="manageRequestProvider.php">Manage Request</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="includes/logout.php">Log Out</a>
@@ -42,54 +39,65 @@
 
     <br><br><br> <br> <br><br>
   </head>
-
-  <h1 class="yellow">Accept Request</h1>
+<div style="padding : 100px 0px 0px 0px">
+  <h1 style = "font-size:3em;
+  font-weight: 300;
+  line-height:1em;
+  text-align: center;
+  color: yellow;padding : 0px 0px 25px 0px;">Accept Request</h1>
   <br>
   <div class="container">
-    <table>
-      <tr>
-        <th>Service ID</th>
+    <table style="border-collapse: collapse;
+width: 100%;">
+      <tr style="color:lightgray;">
         <th>Service Name</th>
-        <th>Booking Date</th>
-        <th>Booking Time</th>
+		<th>Senior</th>
+        <th>Acquired Date Time</th>
         <th>Notes</th>
-        <th>Number of Services</th>
-        <th>Status</th>
         <th>Action</th>
       </tr>
-testing
-      <?php
-      $servername = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname = "seniorcare";
-      $con = new mysqli($servername, $username, $password, $dbname);
+      <?php include "includes/dbconnection.php";
+		
 
-          $sql = "SELECT serviceID, serviceName,bookingDate,bookingTime,notes,numOfServices,status from booking";
-          $result = $con -> query($sql);
-
+          $sql = "SELECT 
+					S.serviceCode,
+					S.title AS Service,
+					U.fullname AS Senior,
+					R.acquiredDate,
+					R.notes
+					FROM request AS R
+					INNER JOIN services AS S ON S.serviceCode = R.service
+					INNER JOIN users AS U ON U.username = R.demander
+					WHERE R.status LIKE 'pending' AND R.service IN(SELECT service FROM providedservices WHERE provider LIKE '".$_SESSION['username']."')";
+		  $result = mysqli_query($dbCon,$sql);
           if ($result-> num_rows > 0 ){
-            while($row = $result -> fetch_assoc()){
-              echo "<tr> <td>".$row["serviceID"]."</td> <td>".$row["serviceName"]."</td><td>".$row["bookingDate"]."</td><td>"
-              .$row["bookingTime"]."</td><td>".$row["notes"]."</td><td>".$row["numOfServices"]."</td><td>".$row["status"]."</td>
-              <td><a href='manageRequestService.php?id=".$row['serviceID']."'>Accept</a></td>
-              </tr>"
-              ;
-
-            }
-            echo "</table>";
-          }
-          else {
+            while($row = $result -> fetch_assoc()){?>
+              <tr style="color:white;"> 
+				<td>
+					<?php echo $row["Service"];?>
+				</td>
+				<td>
+					<?php echo $row["Senior"];?>
+				</td>
+				<td>
+					<?php echo $row["acquiredDate"];?>
+				</td>
+				<td>
+					<?php echo $row["notes"]?>
+				</td>
+				<td>
+					<a href="action.php?id=<?php echo $row['serviceID']?>&action=2">Accept</a>
+				</td>
+              </tr>
+			<?php }} else {
             echo "0 result";
           }
-          $con ->close();
-
            ?>
-    </table>
-
-
-  </div>
-
+      </table>
+</div>
+</div>
+    </div>
+<?php include "footer.php" ?>
 </body>
 
 </html>
