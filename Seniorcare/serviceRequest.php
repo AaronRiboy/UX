@@ -63,22 +63,22 @@
 												</select>
 												<span class="select-arrow"></span>
 											</div>
-				  
+
 											<div class="form-group col-md-6" >
 												<span class="form-label">Booking Date</span>
 												<input class="form-control" type="date" name="bookingDate" required>
 											</div>
 										</div>
-				
+
 										<div class="row">
 											<div class="form-group col-md-6" >
 											<span class="form-label">Booking time</span>
-											<input class="form-control" type="time" name="bookingTime" required>  
+											<input class="form-control" type="time" name="bookingTime" required>
 											</div>
-                  
+
 											<div class="form-group col-md-6" >
 												<span class="form-label">Notes</span>
-												<input class="form-control" type="text" placeholder="Optional" name="notes" >        
+												<input class="form-control" type="text" placeholder="Optional" name="notes" >
 											</div>
 										</div>
 
@@ -96,7 +96,7 @@
 				</div>
 			</div>
 		</section>
-
+<br><br><br><br>
   <?php include "footer.php" ?>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
