@@ -50,7 +50,6 @@
       <table style="border-collapse: collapse;
 width: 100%;">
         <tr style="color:lightgray;">
-          <th>Service ID</th>
           <th>Service Name</th>
           <th>Booking Datetime</th>
           <th>Notes</th>
@@ -76,9 +75,6 @@ width: 100%;">
           if ($result-> num_rows > 0 ){
             while($row = $result -> fetch_assoc()){?>
               <tr style="color:white;"> 
-				<td>
-					<?php echo $row["serviceID"];?>
-				</td>
 				<td>
 					<?php echo $row["serviceName"];?>
 				</td>

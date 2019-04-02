@@ -60,6 +60,7 @@ width: 100%;">
 		
 
           $sql = "SELECT 
+					R.ID,
 					S.serviceCode,
 					S.title AS Service,
 					U.fullname AS Senior,
@@ -86,7 +87,7 @@ width: 100%;">
 					<?php echo $row["notes"]?>
 				</td>
 				<td>
-					<a href="action.php?id=<?php echo $row['serviceID']?>&action=2">Accept</a>
+					<a href="action.php?id=<?php echo $row['ID']?>&action=2">Accept</a>
 				</td>
               </tr>
 			<?php }} else {
