@@ -1,4 +1,4 @@
-<?php include("includes/dbconnection.php"); 
+<?php include("includes/dbconnection.php");
 if(isset($_POST['serviceCode'])){
 	$time = $_POST['bookingDate']." ".str_replace("%3A",":",$_POST['bookingTime']);
 	$sql = "INSERT INTO Request (demander,service,acquiredDate,notes) VALUES
@@ -53,13 +53,13 @@ if(isset($_POST['serviceCode'])){
 
 
     <!--Booking-->
-		<section style="height:100%; padding-top:5%">
+		<section style="height:100%;>
 			<div id="booking" class="section-1">
 				<div class="section-center">
 					<div class="container ">
 						<br><br><br><br><br>
 							<div class="row ">
-								<div class="booking-form col-md-12 col-sm-12">
+								<div class="booking-form col-md-12 col-sm-12" style="margin-bottom:40px;">
 									<form name="myForm" id="myForm" action="<?php $_SERVER['PHP_SELF']; ?>" onsubmit="return validateForm()" method="POST">
 										<div class="text-center welcome">
 											<h1>Service Request</h1>
@@ -179,7 +179,7 @@ if(isset($_POST['serviceCode'])){
       if (x == "") {
           alert("Please select the number of services");
           return false;
-      } 
+      }
     }
 
 

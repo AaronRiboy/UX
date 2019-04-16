@@ -13,7 +13,7 @@
     crossorigin="anonymous">
 </head>
 
-<body style="background-image: url('img/homeSe.jpg');background-size: cover;">
+<body style="background-image: url('img/homeSe1.jpg');background-size: cover;">
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
@@ -49,10 +49,10 @@
   <section class="section section-xl bg-gray-700" style="height:85%;">
     <div class="container">
       <div class="row service-text">
-        <div class="col-sm-9 col-md-7 col-lg-6">
+        <div class="col-sm-12 col-md-12 col-lg-6">
           <div class="box-2">
             <br><br><br>
-            <div class="wow-outer" style="color:#00b3b3; padding-left:10%; padding-top: 15%">
+            <div class="wow-outer" style="color:#A20060;  padding-top: 35%">
               <h3>Welcome,</h3>
               <h1 class="font-weight-bold" style="padding-left: 20%"><?php echo $_SESSION['fullname']; ?></h1>
             </div>
